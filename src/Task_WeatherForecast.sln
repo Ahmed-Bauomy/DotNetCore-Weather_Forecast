@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.Domain", "Core\WeatherForecast.Domain\WeatherForecast.Domain.csproj", "{8B26E794-C461-4995-A44F-3770336DACEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.Application", "Core\WeatherForecast.Application\WeatherForecast.Application.csproj", "{7CBC0672-A94D-457F-B227-F330EA7C915D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B26E794-C461-4995-A44F-3770336DACEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B26E794-C461-4995-A44F-3770336DACEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B26E794-C461-4995-A44F-3770336DACEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B26E794-C461-4995-A44F-3770336DACEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CBC0672-A94D-457F-B227-F330EA7C915D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBC0672-A94D-457F-B227-F330EA7C915D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CBC0672-A94D-457F-B227-F330EA7C915D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CBC0672-A94D-457F-B227-F330EA7C915D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B26E794-C461-4995-A44F-3770336DACEE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7CBC0672-A94D-457F-B227-F330EA7C915D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF337FCD-9030-43D6-A4EC-772F5ACAE279}
+	EndGlobalSection
+EndGlobal
