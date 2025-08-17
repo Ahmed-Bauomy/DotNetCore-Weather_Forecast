@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WeatherForecast.Application.Dtos;
 
 namespace WeatherForecast.Application.Contracts
 {
-    public interface IWeatherService
+    public interface IValidationBehaviour<TEntity> where TEntity : class
     {
-        Task<WeatherDto> GetWeatherByCityAsync(string city);
+        Task Validate(TEntity entity);
     }
 }

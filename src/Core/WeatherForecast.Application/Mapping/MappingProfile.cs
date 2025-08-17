@@ -13,7 +13,8 @@ namespace WeatherForecast.Application.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<WeatherFC, WeatherDto>().ReverseMap();
+            CreateMap<WeatherFC, WeatherForecastDto>().ReverseMap();
+            CreateMap<WeatherFC, CreateWeatherForecastDto>().ReverseMap();
         }
     }
 }
