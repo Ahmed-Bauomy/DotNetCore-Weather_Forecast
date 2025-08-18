@@ -34,6 +34,12 @@ namespace WeatherForecast.Infrastructure.Repositories
             return result.Entity;
         }
 
+        public async Task AddRangeAsync(List<T> entities)
+        {
+            await _dbSet.AddRangeAsync(entities);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task UpdateAsync(T entity)
         {
             _dbSet.Update(entity);

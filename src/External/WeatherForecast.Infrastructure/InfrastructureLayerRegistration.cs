@@ -25,6 +25,7 @@ namespace WeatherForecast.Infrastructure
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<SeedData>();
             return services;
         }
     }

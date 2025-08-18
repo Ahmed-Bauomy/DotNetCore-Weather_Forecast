@@ -90,7 +90,12 @@ using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     dbContext.Database.Migrate(); // This applies any pending migrations
+    // seed data
+    var seed = scope.ServiceProvider.GetRequiredService<SeedData>();
+    await seed.SetUpWeatherForecastData();
 }
+
+
 
 
 app.Run();
