@@ -55,8 +55,8 @@ WeatherForecast/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/WeatherForecast.git
-cd WeatherForecast
+git clone [https://github.com/Ahmed-Bauomy/DotNetCore-Weather_Forecast]
+cd DotNetCore-Weather_Forecast
 ```
 
 ### 2. Database Migration (SQL Server LocalDB)
