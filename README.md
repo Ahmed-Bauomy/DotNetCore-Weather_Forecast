@@ -15,7 +15,7 @@ WeatherForecast/
 │   │   └── WeatherForecast.Application/   # Application logic, interfaces, DTOs, services
 │   └── External/
 │       ├── WeatherForecast.API/           # Minimal API (endpoints, middleware, auth)
-│       └── WeatherForecast.Infrastructure/# EF Core, repositories, DB, caching
+│       └── WeatherForecast.Infrastructure/# EF Core, repositories, DB
 ├── tests/
 │   └── WeatherForecast.UnitTests/                # Unit tests
 │   └── WeatherForecast.IntegrationTests/         # integration tests
