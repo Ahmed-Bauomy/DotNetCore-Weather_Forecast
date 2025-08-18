@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherForecast.Application.Contracts;
+using WeatherForecast.Application.Services;
 using WeatherForecast.Domain.Contracts;
 using WeatherForecast.Infrastructure.Data;
 using WeatherForecast.Infrastructure.Repositories;
@@ -20,6 +22,9 @@ namespace WeatherForecast.Infrastructure
                 options.UseSqlServer(configuration.GetConnectionString("Default")));
 
             services.AddScoped<IWeatherForecastRepository, WeatherForecastRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
+            services.AddScoped<IAuthService, AuthService>();
             return services;
         }
     }

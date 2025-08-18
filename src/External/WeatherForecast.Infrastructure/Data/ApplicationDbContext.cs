@@ -16,6 +16,7 @@ namespace WeatherForecast.Infrastructure.Data
         }
 
         public DbSet<WeatherFC> WeatherForecasts { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
