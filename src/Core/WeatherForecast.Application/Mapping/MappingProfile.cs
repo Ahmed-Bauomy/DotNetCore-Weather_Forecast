@@ -15,6 +15,7 @@ namespace WeatherForecast.Application.Mapping
         {
             CreateMap<WeatherFC, WeatherForecastDto>().ReverseMap();
             CreateMap<WeatherFC, CreateWeatherForecastDto>().ReverseMap();
+            CreateMap<User, UserDto>().ReverseMap();
         }
     }
 }

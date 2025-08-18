@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,15 +16,20 @@ namespace WeatherForecast.Application.Services
         private readonly IUserRepository _userRepository;
         private readonly IJwtTokenGenerator _jwtTokenGenerator;
         private readonly IValidationBehaviour<UserDto> _registerUserValidator;
+        private readonly IMapper _mapper;
 
-        public AuthService(IUserRepository userRepository, IJwtTokenGenerator jwtTokenGenerator, IValidationBehaviour<UserDto> registerUserValidator)
+        public AuthService(IUserRepository userRepository, 
+                           IJwtTokenGenerator jwtTokenGenerator, 
+                           IValidationBehaviour<UserDto> registerUserValidator,
+                           IMapper mapper)
         {
             _userRepository = userRepository;
             _jwtTokenGenerator = jwtTokenGenerator;
             _registerUserValidator = registerUserValidator;
+            _mapper = mapper;
         }
 
-        public async Task RegisterAsync(UserDto userDto)
+        public async Task<UserDto> RegisterAsync(UserDto userDto)
         {
             await _registerUserValidator.Validate(userDto);
             var existingUser = await _userRepository.GetByEmailAsync(userDto.Email);
@@ -37,7 +43,7 @@ namespace WeatherForecast.Application.Services
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password)
             };
 
-            await _userRepository.AddAsync(user);
+            return _mapper.Map<UserDto>(await _userRepository.AddAsync(user));
         }
 
         public async Task<TokenResult> LoginAsync(UserDto userDto)
@@ -47,6 +53,12 @@ namespace WeatherForecast.Application.Services
                 throw new Exception("Invalid username or password");
 
             return _jwtTokenGenerator.GenerateToken(user);
+        }
+
+        public async Task<UserDto> GetByEmailAsync(string email)
+        {
+            var user = await _userRepository.GetByEmailAsync(email);
+            return _mapper.Map<UserDto>(user);
         }
     }
 }

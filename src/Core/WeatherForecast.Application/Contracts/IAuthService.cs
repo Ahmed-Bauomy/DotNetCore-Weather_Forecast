@@ -9,7 +9,8 @@ namespace WeatherForecast.Application.Contracts
 {
     public interface IAuthService
     {
-        Task RegisterAsync(UserDto userDto);
+        Task<UserDto> RegisterAsync(UserDto userDto);
         Task<TokenResult> LoginAsync(UserDto userDto);
+        Task<UserDto> GetByEmailAsync(string email);
     }
 }

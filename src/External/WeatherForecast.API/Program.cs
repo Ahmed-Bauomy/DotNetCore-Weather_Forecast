@@ -79,6 +79,12 @@ app.MapPost("/api/auth/login", (UserDto userDto, IAuthService authService) =>
 })
 .WithOpenApi();
 
+app.MapGet("/api/User", (string email, IAuthService authService) =>
+{
+    return authService.GetByEmailAsync(email);
+})
+.WithOpenApi();
+
 // Apply migrations automatically
 using (var scope = app.Services.CreateScope())
 {
@@ -88,4 +94,6 @@ using (var scope = app.Services.CreateScope())
 
 
 app.Run();
+
+public partial class Program { } // needed for WebApplicationFactory
 
