@@ -17,8 +17,8 @@ WeatherForecast/
 │       ├── WeatherForecast.API/           # Minimal API (endpoints, middleware, auth)
 │       └── WeatherForecast.Infrastructure/# EF Core, repositories, DB
 ├── tests/
-│   └── WeatherForecast.UnitTests/                # Unit tests
-│   └── WeatherForecast.IntegrationTests/         # integration tests
+│   └── WeatherForecast.UnitTest/                # Unit tests
+│   └── WeatherForecast.IntegrationTest/         # integration tests
 └── README.md
 ```
 
