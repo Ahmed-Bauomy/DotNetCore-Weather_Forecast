@@ -14,11 +14,11 @@ WeatherForecast/
 │   │   ├── WeatherForecast.Domain/        # Entities and core domain models
 │   │   └── WeatherForecast.Application/   # Application logic, interfaces, DTOs, services
 │   └── External/
-│       ├── WeatherForecast.API/           # Minimal API (endpoints, middleware, auth)
-│       └── WeatherForecast.Infrastructure/# EF Core, repositories, DB
-├── tests/
-│   └── WeatherForecast.UnitTest/                # Unit tests
-│   └── WeatherForecast.IntegrationTest/         # integration tests
+│   │   ├── WeatherForecast.API/           # Minimal API (endpoints, middleware, auth)
+│   │   └── WeatherForecast.Infrastructure/# EF Core, repositories, DB
+├   └── UnitTests/
+│       └── WeatherForecast.UnitTest/                # Unit tests
+│       └── WeatherForecast.IntegrationTest/         # integration tests
 └── README.md
 ```
 
