@@ -1,6 +1,6 @@
 # WeatherForecast API
 
-A minimal **Clean Architecture ASP.NET Core Web API** built with **.NET 8** that retrieves weather forecasts by city name.  
+A **Clean Architecture .NET Core minimal Web API** built with **.NET 8** that retrieves weather forecasts by city name.  
 The project demonstrates **JWT authentication**, **caching**, and **testability** with **unit and integration tests**.
 
 ---
